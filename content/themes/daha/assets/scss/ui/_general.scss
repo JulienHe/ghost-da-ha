@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600);
+@import url(http://fonts.googleapis.com/css?family=Kreon:300,400,700);
+
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #fcfcfc;
+	color: #333333;
+}
+
+body{
+	font-family: 'Kreon', serif;
+	font-weight: 300;
+}
+
+.main_daha{
+  &.posts{
+    padding-left: 40px;
+  }
+}
+
+a{
+  color: $brandColor;
+  font-weight: 400;
+  font-style: italic;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6,.btn,.posttags_daha{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+}
+
+strong{
+	font-weight: 400;
+}
+
+pre,code{
+	font-size: 12px;
+}
+
+blockquote {
+  background: darken(#f8f8f8,1%);
+  border-left: 10px solid $brandColor;
+  font-style: italic;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: $brandColor;
+  font-style: normal;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display : inline;
+}
+
+.animate{
+	@include transition-property(all);
+  @include transition-duration(.3s);
+}
+.pace .pace-progress {
+  background: white;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}

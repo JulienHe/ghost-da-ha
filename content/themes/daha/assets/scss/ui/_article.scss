@@ -1,0 +1,24 @@
+.onePost{
+	width: 100%;
+	.article_daha{
+		padding-top: 1rem;
+		width: 600px;
+		margin:0 auto;
+		hr{
+			height: 1px;
+			width: 100%;
+			display: block;
+			overflow: hidden;
+			margin:1rem 0;
+			border:0;
+			background-color: $brandColor;
+		}
+		.posttags_daha{
+			font-size: 1rem;
+			font-style: italic;
+		}
+		#footer{
+			display: none;
+		}
+	}
+}

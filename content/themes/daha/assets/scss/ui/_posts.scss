@@ -1,0 +1,140 @@
+.posts{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	&>div{
+		height: 100%;
+		overflow : auto;
+		article{
+			float: left;
+			height: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			&>div{
+				width: 600px;
+				padding: 10px 20px;
+				border-right: 1px solid #eaeaea;
+				overflow: auto;
+				height: 100%;
+				position: relative;
+				&.fullSize{
+					width: 750px;
+				}
+			}
+		}
+	}
+}
+
+article{
+	border-top: 8px solid $brandColor;
+	&.aroe{
+		border-color: $aroe;
+	}
+	&.analytics{
+		border-color : $analytics;
+	}
+	&.html{
+		border-color: $html;
+	}
+	&.css{
+		border-color: $css;
+	}
+	&.node{
+		border-color: $nodejs;
+	}
+}
+
+h1{
+	margin-bottom: 0rem;
+}
+.date{
+	margin-bottom: 1.2rem;
+	overflow: hidden;
+	display: block;
+	font-size: .8rem;
+	font-style: italic;
+}
+
+.bottom_daha{
+	position: absolute;
+	margin-left: -20px;
+	height: 50px;
+	width: 100%;
+	bottom: 0;
+	padding: 10px 20px;
+	background-color: #fcfcfc;
+	border-top: 1px solid darken(#fcfcfc,10%);
+	// border-right: 1px solid darken(#fcfcfc,10%);
+}
+
+.btn{
+	float: right;
+	height: 30px;
+	padding: 0 1rem;
+	display: block;
+	border: 1px solid darken(#fcfcfc,10%);
+	font-size: .75rem;
+	color: $brandColor;
+	line-height: 28px;
+	text-transform: uppercase;
+	@extend .animate;
+	&:hover{
+		background-color: $brandColor;
+		color: white;
+	}
+}
+
+.share{
+	float: left;
+	li{
+		float: left;
+		margin-right: .5rem;
+		a{
+			width: 30px;
+			height: 30px;
+			display: block;
+			font-size: 0;
+			border: 1px solid darken(#fcfcfc,10%);
+			background: url(../img/socialPost.png) no-repeat -31px top;
+			position: relative;
+			&.facebook{
+				background-position: right -31px;
+				span{
+					background-position: -3px -32px;
+				}
+			}
+			&.google{
+				background-position: -30px -60px;
+				span{
+					background-position: -1px -61px;
+				}
+			}
+			&.mail{
+				background-position: -31px -90px;
+				span{
+					background-position: -2px -91px;
+				}
+			}
+			span{
+				content: "";
+				position: absolute;
+				top: 0; left: 0;
+				height: 30px;
+				width: 30px;
+				background: $brandColor url(../img/socialPost.png) no-repeat -2px -1px;
+				border: 1px solid $brandColor;
+				opacity: 0;
+				-webkit-transition: opacity 0.3s;
+				-moz-transition:    opacity 0.3s;
+				-o-transition:      opacity 0.3s;
+				&:hover{
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}

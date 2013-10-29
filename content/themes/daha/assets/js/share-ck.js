@@ -1,0 +1,1 @@
+var opts={pinterest:{height:525},google:{height:400}};$("ul.share").on("click","li a",function(e){if(!$(this).hasClass("mail")){e.preventDefault();var t=$(this),n=t.attr("class");window.open(t.attr("href"),"_blank","width=560,height="+(opts[n]&&opts[n].height||450));return!1}});

@@ -1,0 +1,12 @@
+<nav role="navigation">
+<ul class="navigationFixed">
+	<li><a href="{{@blog.url}}" class="home">Accueil <span></span></a></li>
+	<li><a href="" class="top">Top <span></span></a></li>
+	{{#if next}}
+        <li><a href="{{pageUrl next}}" class="next">Suivant <span></span></a></li>
+    {{/if}}
+    {{#if prev}}
+		<li><a href="{{pageUrl prev}}" class="prev">Précédent <span></span></a></li>
+	{{/if}}
+</ul>
+</nav>
